@@ -23,6 +23,12 @@ sudo apt install make
 make setup
 ```
 
+This creates a virtualenv named `graft-env`. Activate it with:
+
+```bash
+source graft-env/bin/activate
+```
+
 ## Install on Raspberry Pi
 
 Follow the [Raspberry Pi Setup](raspberrypi.md) instructions.

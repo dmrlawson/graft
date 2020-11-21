@@ -2,24 +2,20 @@ all: test
 
 setup:
 	sudo apt install \
-		libgtk-3-dev\
-		python3 \
-		python3-attr \
-		python3-gi \
-		python3-gi-cairo \
-		python3-pytest \
-		python3-pytest-pep8 \
-		python3-pytest-pylint \
-		pylama \
-		libgtk-3-dev \
-
+		libgirepository1.0-dev \
+		libcairo2-dev \
+		pkg-config \
+		python3-dev \
+		python3-venv
+	python3 -m venv graft-env
+	graft-env/bin/python -m pip install -r requirements.txt
 
 test:
-	pytest-3 --pep8 -vv
+	graft-env/bin/python -m pytest -vv
 
 
 test-full:
-	pytest-3 \
+	graft-env/bin/python -m pytest \
 		--quiet \
 		--pep8 \
 		--pylama \
