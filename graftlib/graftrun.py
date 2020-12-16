@@ -144,7 +144,7 @@ class FramesCounter:
 
         # If we have gone over the max, raise a StopIteration
         if self.max_count is not None and self.count >= self.max_count:
-            raise StopIteration()
+            return
 
 
 def _run_program(program: Iterable, rand, max_forks, eval_expr) -> Iterable:

@@ -18,7 +18,7 @@ class Peekable:
 
     def peek(self) -> str:
         if self._nxt is None:
-            raise StopIteration()
+            return
         else:
             return self._nxt
 
@@ -27,7 +27,7 @@ class Peekable:
 
     def __next__(self) -> str:
         if self._nxt is None:
-            raise StopIteration()
+            return
         else:
             ret = self._nxt
             self._nxt = self._move_next()

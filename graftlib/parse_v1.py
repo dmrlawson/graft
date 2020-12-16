@@ -218,7 +218,7 @@ class _Parser:
 
         if type(nx) == self.end_tok_type:
             if so_far is None:
-                raise StopIteration()
+                return
             else:
                 return so_far
 
