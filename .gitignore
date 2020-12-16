@@ -2,3 +2,4 @@
 /.ropeproject/
 /bot-gifs/
 *.pyc
+graft-env
